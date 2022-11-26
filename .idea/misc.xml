@@ -9,6 +9,12 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/video_list_item.xml" value="0.1" />
+        <entry key="mediaplayer/src/main/res/drawable/ic_baseline_pause_24.xml" value="0.231" />
+        <entry key="mediaplayer/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.231" />
+        <entry key="mediaplayer/src/main/res/drawable/ic_baseline_replay_24.xml" value="0.231" />
+        <entry key="mediaplayer/src/main/res/layout-land/activity_main.xml" value="0.23015873015873015" />
+        <entry key="mediaplayer/src/main/res/layout/activity_main.xml" value="0.16621376811594202" />
+        <entry key="mediaplayer/src/main/res/layout/controller_layout.xml" value="0.13221884498480244" />
         <entry key="videoview/src/main/res/layout/activity_main.xml" value="0.16621376811594202" />
       </map>
     </option>
