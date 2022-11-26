@@ -1,0 +1,49 @@
+task hello(dependsOn: 'clean'){
+    10.times{
+        tasks.register("task$it"){
+            println "task$it execute>>>"
+        }
+    }
+    doLast {
+        println "hello task >>>"
+    }
+
+    dependsOn('task1')
+
+}
+
+task testA(){
+    doLast {
+        println "test >>>>>"
+    }
+}
+
+
+
+tasks.whenTaskAdded { task ->
+    println "$task.name"
+    if(task.name == 'assmbleDebug'){
+        task.finalizedBy 'hello'
+    }
+}
+
+afterEvaluate {
+    def cleanTask=tasks.findByName('clean')
+    println "****** $cleanTask"
+    if(cleanTask != null){
+
+        cleanTask.mustRunAfter {
+            println "*****bbbb* $clean"
+//            test.execute()
+        }
+    }
+}
+/*
+ * 会返回null，因为构建图还未生成，需要放在app中的build.gradle文件中才行
+ */
+//tasks.findByName("build").doLast {
+//  println 'build done >>>>'
+//}
+
+
+
